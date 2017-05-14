@@ -1,0 +1,31 @@
+﻿<Page
+    x:Class="Album.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Album"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid HorizontalAlignment="Right" Width="1049">
+            <Grid.Background>
+                <ImageBrush ImageSource="Assets/background2.png"/>
+            </Grid.Background>
+        </Grid>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Left" Width="210" Height="400" VerticalAlignment="Center">
+            <RelativePanel Margin="0,45,0,0" Tapped="BeginRelativePanel_Tapped" PointerEntered="Panel_PointerEntered" PointerExited="Panel_PointerExited">
+                <TextBlock Text="Begin" FontSize="40"  Margin="60,0,0,0" FontWeight="Thin" FontStyle="Italic"></TextBlock>
+            </RelativePanel>
+            <RelativePanel x:Name="RulePanel" Margin="0,45,0,0" PointerEntered="Panel_PointerEntered" PointerExited="Panel_PointerExited" Tapped="RulePanel_Tapped">
+                <TextBlock Text="Rule" FontSize="40"  Margin="60,0,0,0" FontWeight="Thin" FontStyle="Italic"></TextBlock>
+            </RelativePanel>
+            <RelativePanel x:Name="ThanksPanel" Margin="0,45,0,0" PointerEntered="Panel_PointerEntered" PointerExited="Panel_PointerExited" Tapped="ThanksPanel_Tapped">
+                <TextBlock Text="Thanks" FontSize="40"  Margin="60,0,0,0" FontWeight="Thin" FontStyle="Italic"></TextBlock>
+            </RelativePanel>
+            <RelativePanel x:Name="ExitPanel" Margin="0,45,0,0" PointerEntered="Panel_PointerEntered" PointerExited="Panel_PointerExited" Tapped="ExitPanel_Tapped">
+                <TextBlock Text="Exit" FontSize="40"  Margin="60,0,0,0" FontWeight="Thin" FontStyle="Italic"></TextBlock>
+            </RelativePanel>
+        </StackPanel>
+    </Grid>
+</Page>
